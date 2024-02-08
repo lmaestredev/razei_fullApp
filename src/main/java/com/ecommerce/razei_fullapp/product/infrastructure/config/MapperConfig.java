@@ -1,9 +1,9 @@
-package products.infrastructure.config;
+package com.ecommerce.razei_fullapp.product.infrastructure.config;
 
 import org.mapstruct.factory.Mappers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import products.infrastructure.drivenAdapters.mapper.ProductMapper;
+import com.ecommerce.razei_fullapp.product.infrastructure.outbound.mapper.ProductMapper;
 
 @Configuration
 public class MapperConfig {

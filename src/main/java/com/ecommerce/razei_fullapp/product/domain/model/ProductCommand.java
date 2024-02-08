@@ -1,13 +1,7 @@
-package products.infrastructure.drivenAdapters.entity;
+package com.ecommerce.razei_fullapp.product.domain.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+public class ProductCommand {
 
-@Document(collection = "Products")
-public class Product {
-
-    @Id
-    private String id;
     private String name;
     private String code;
     private double price;
@@ -15,25 +9,16 @@ public class Product {
     private String type;
     private String description;
 
-    public Product() {
+    public ProductCommand() {
     }
 
-    public Product(String name, String code, double price, Integer quantity, String type, String description) {
+    public ProductCommand(String name, String code, double price, Integer quantity, String type, String description) {
         this.name = name;
         this.code = code;
         this.price = price;
         this.quantity = quantity;
         this.type = type;
         this.description = description;
-    }
-
-    //getters
-    public String getId() {
-        return id;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public String getName() {
@@ -52,13 +37,12 @@ public class Product {
         return quantity;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType() {
+        return type;
     }
 
-    //setters
-    public void setType(String type) {
-        this.type = type;
+    public String getDescription() {
+        return description;
     }
 
     public void setName(String name) {
@@ -75,6 +59,10 @@ public class Product {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setDescription(String description) {
