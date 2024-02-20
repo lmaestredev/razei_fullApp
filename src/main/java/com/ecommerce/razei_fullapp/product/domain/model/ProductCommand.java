@@ -1,16 +1,29 @@
 package com.ecommerce.razei_fullapp.product.domain.model;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 public class ProductCommand {
 
-    @NotEmpty(message = "Name can't be null")
+    @NotBlank(message = "Name cannot be blank")
     private String name;
 
+    @NotBlank(message = "Code cannot be blank")
     private String code;
+
+    @Positive(message = "Price must be a positive number")
     private double price;
+
+    @NotNull(message = "Quantity cannot be null")
+    @Positive(message = "Quantity must be a positive number")
     private Integer quantity;
+
+    @NotBlank(message = "Type cannot be blank")
     private String type;
+
+    @NotBlank(message = "Description cannot be blank")
     private String description;
 
     public ProductCommand() {

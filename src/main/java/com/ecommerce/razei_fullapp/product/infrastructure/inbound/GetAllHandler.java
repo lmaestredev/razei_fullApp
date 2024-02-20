@@ -1,4 +1,4 @@
-package com.ecommerce.razei_fullapp.product.infrastructure.inbound.useCaseHandler;
+package com.ecommerce.razei_fullapp.product.infrastructure.inbound;
 
 import com.ecommerce.razei_fullapp.product.application.useCase.GetAllUseCase;
 import com.ecommerce.razei_fullapp.product.domain.model.ProductQuery;
