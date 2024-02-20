@@ -8,7 +8,9 @@ import org.mapstruct.Mapper;
 @Mapper
 public interface ProductMapper {
 
-    ProductCommand entityToModel(ProductEntity product);
+    ProductCommand entityToCommand(ProductEntity product);
+    ProductEntity commandToEntity(ProductCommand product);
     ProductEntity queryToEntity(ProductQuery product);
     ProductQuery entityToQuery(ProductEntity product);
+
 }

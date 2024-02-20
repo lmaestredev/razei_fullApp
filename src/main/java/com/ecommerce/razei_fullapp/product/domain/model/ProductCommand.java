@@ -1,8 +1,12 @@
 package com.ecommerce.razei_fullapp.product.domain.model;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class ProductCommand {
 
+    @NotEmpty(message = "Name can't be null")
     private String name;
+
     private String code;
     private double price;
     private Integer quantity;

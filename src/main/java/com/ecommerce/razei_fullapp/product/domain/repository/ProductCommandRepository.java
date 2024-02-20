@@ -1,8 +1,9 @@
 package com.ecommerce.razei_fullapp.product.domain.repository;
 
 import com.ecommerce.razei_fullapp.product.domain.model.ProductCommand;
-import reactor.core.publisher.Flux;
+import com.ecommerce.razei_fullapp.product.domain.model.ProductQuery;
+import reactor.core.publisher.Mono;
 
 public interface ProductCommandRepository {
-    Flux<ProductCommand> getAllProducts();
+    Mono<ProductQuery> createProduct(ProductCommand productCommand);
 }
